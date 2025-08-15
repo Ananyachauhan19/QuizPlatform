@@ -5,8 +5,6 @@ import QuizPage from "./user/QuizPage";
 import ThanksPage from "./user/ThanksPage";
 import AdminDashboard from "./admin/AdminDashboard";
 import CreateEditQuiz from "./admin/CreateEditQuiz";
-import UploadQuestions from "./admin/UploadQuestions";
-import ScheduleQuiz from "./admin/ScheduleQuiz";
 import ParticipationDashboard from "./admin/ParticipationDashboard";
 import ExportResults from "./admin/ExportResults";
 
@@ -21,14 +19,12 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LoginWithRedirect />} />
         <Route path="/dashboard" element={<StudentDashboard />} />
-  <Route path="/quiz" element={<QuizPage />} />
-  <Route path="/thanks" element={<ThanksPage />} />
-  <Route path="/admin" element={<AdminDashboard />} />
-  <Route path="/admin/create-quiz" element={<CreateEditQuiz />} />
-  <Route path="/admin/upload-questions" element={<UploadQuestions />} />
-  <Route path="/admin/schedule-quiz" element={<ScheduleQuiz />} />
-  <Route path="/admin/participation" element={<ParticipationDashboard />} />
-  <Route path="/admin/export-results" element={<ExportResults />} />
+        <Route path="/quiz/:id" element={<QuizPage />} />
+        <Route path="/thanks" element={<ThanksPage />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/create-quiz" element={<CreateEditQuiz />} />
+        <Route path="/admin/participation" element={<ParticipationDashboard />} />
+        <Route path="/admin/export-results" element={<ExportResults />} />
       </Routes>
     </Router>
   );
